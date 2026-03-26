@@ -52,7 +52,7 @@ function handleAPIRequest(req, res) {
   }
   
   // 查询接口
-  if (pathname === '/api/query' && req.method === 'GET') {
+  if (pathname === 'https://catermaozi.github.io/ticket/api/query' && req.method === 'GET') {
     const cn = url.searchParams.get('cn');
     
     if (!cn || cn.trim() === '') {
@@ -100,7 +100,7 @@ function handleStaticRequest(req, res) {
   
   // 默认首页
   if (pathname === '/') {
-    pathname = '/index.html';
+    pathname = 'https://catermaozi.github.io/ticket/index.html';
   }
   
   const filePath = path.join(__dirname, pathname);
