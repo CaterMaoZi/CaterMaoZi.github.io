@@ -1,1 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="河北漫喵动漫展官方票代身份核对系统">
+  <title>官方票代身份核对系统 - 河北漫喵动漫展</title>
+  <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+  <div class="container">
+    <!-- 头部 -->
+    <header class="header">
+      <h1 class="header-title">官方票代身份核对系统</h1>
+      <p class="header-subtitle">河北漫喵动漫展</p>
+    </header>
 
+    <!-- 主要内容区 -->
+    <main class="main">
+      <div class="query-section">
+        <div class="query-box">
+          <label for="cnInput" class="query-label">票代CN(圈名)查询</label>
+          <input 
+            type="text" 
+            id="cnInput" 
+            class="query-input" 
+            placeholder="在此输入票代的CN(圈名)，请确认输入无误"
+            autocomplete="off"
+          >
+          <button id="queryBtn" class="query-button">
+            <span class="button-text">查询</span>
+            <span class="button-loading" style="display: none;">查询中...</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- 结果展示区 -->
+      <div id="resultSection" class="result-section" style="display: none;">
+        <!-- 查询结果将在这里动态显示 -->
+      </div>
+    </main>
+
+    <!-- 底部 -->
+    <footer class="footer">
+      <p class="footer-text">备案号：<a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">冀ICP备2024091724号-1</a></p>
+    </footer>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
