@@ -129,7 +129,7 @@ const server = http.createServer((req, res) => {
   const url = new URL(req.url, `http://${req.headers.host}`);
   
   // API请求
-  if (url.pathname.startsWith('/api/')) {
+  if (url.pathname.startsWith('https://catermaozi.github.io/ticket/api/')) {
     handleAPIRequest(req, res);
   } else {
     // 静态文件请求
