@@ -1,6 +1,6 @@
 /**
  * 河北漫喵动漫展 - 官方票代身份核对系统
- * 前端交互脚本
+ * 前端交互脚本（纯静态版本 - 支持 GitHub Pages 部署）
  */
 
 // DOM元素
@@ -10,6 +10,9 @@ const resultSection = document.getElementById('resultSection');
 const buttonText = queryBtn.querySelector('.button-text');
 const buttonLoading = queryBtn.querySelector('.button-loading');
 
+// 缓存票代数据
+let agentsData = null;
+
 // 绑定事件
 queryBtn.addEventListener('click', handleQuery);
 cnInput.addEventListener('keypress', (e) => {
@@ -17,6 +20,54 @@ cnInput.addEventListener('keypress', (e) => {
     handleQuery();
   }
 });
+
+/**
+ * 获取数据文件路径（支持 GitHub Pages 子路径部署）
+ * @returns {string} 数据文件的完整路径
+ */
+function getDataPath() {
+  // 获取当前页面的基础路径
+  // GitHub Pages 可能部署在子路径，如 https://username.github.io/repo-name/
+  const basePath = window.location.pathname.replace(/\/$/, '');
+  // 使用相对路径，自动适应当前位置
+  return './data.json';
+}
+
+/**
+ * 加载票代数据
+ * @returns {Promise<Array>} 票代数据数组
+ */
+async function loadAgentsData() {
+  // 如果已缓存，直接返回
+  if (agentsData) {
+    return agentsData;
+  }
+  
+  try {
+    const dataPath = getDataPath();
+    const response = await fetch(dataPath);
+    
+    if (!response.ok) {
+      throw new Error(`加载数据失败: ${response.status}`);
+    }
+    
+    agentsData = await response.json();
+    return agentsData;
+  } catch (error) {
+    console.error('加载数据文件失败:', error);
+    throw error;
+  }
+}
+
+/**
+ * 根据CN查询票代
+ * @param {string} cn - 圈名
+ * @returns {object|null} 票代信息或null
+ */
+async function queryByCN(cn) {
+  const agents = await loadAgentsData();
+  return agents.find(agent => agent.cn === cn) || null;
+}
 
 /**
  * 处理查询请求
@@ -34,19 +85,19 @@ async function handleQuery() {
   setLoading(true);
   
   try {
-    // 发送查询请求
-    const response = await fetch(`https://catermaozi.github.io/ticket/api/query?cn=${encodeURIComponent(cn)}`);
-    const data = await response.json();
+    // 查询票代数据
+    const agent = await queryByCN(cn);
     
-    // 显示结果
-    if (data.success && data.data) {
-      showResult(true, data.message, data.data);
+    if (agent) {
+      // 查询成功
+      showResult(true, '身份核对成功，官方票代确认无误！', agent);
     } else {
-      showResult(false, data.message);
+      // 查询失败
+      showResult(false, '身份核对失败，请立刻核查对方身份！官方交流群：1055807210');
     }
   } catch (error) {
     console.error('查询失败:', error);
-    showResult(false, '查询失败，请检查网络连接后重试');
+    showResult(false, '数据加载失败，请刷新页面后重试');
   } finally {
     setLoading(false);
   }
