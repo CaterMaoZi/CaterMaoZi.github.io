@@ -1,66 +1,18 @@
 [
   {
     "id": "001",
-    "cn": "星空小熊",
-    "gender": "女",
-    "level": "金牌票代",
-    "wechat": "starrybear2024",
-    "qq": "123456789"
+    "cn": "暴龙",
+    "gender": "男",
+    "level": "官方高级票代",
+    "wechat": "LLX1205ovo",
+    "qq": "2820613092"
   },
   {
     "id": "002",
-    "cn": "梦幻少女",
-    "gender": "女",
-    "level": "银牌票代",
-    "wechat": "dreamgirl_miao",
-    "qq": "234567890"
-  },
-  {
-    "id": "003",
-    "cn": "二次元少年",
+    "cn": "鬼肖",
     "gender": "男",
-    "level": "金牌票代",
-    "wechat": "acne_boy_2024",
-    "qq": "345678901"
-  },
-  {
-    "id": "004",
-    "cn": "猫咪酱",
-    "gender": "女",
-    "level": "铜牌票代",
-    "wechat": "neko_chan_miao",
-    "qq": "456789012"
-  },
-  {
-    "id": "005",
-    "cn": "樱花祭",
-    "gender": "女",
-    "level": "银牌票代",
-    "wechat": "sakura_festival",
-    "qq": "567890123"
-  },
-  {
-    "id": "006",
-    "cn": "剑心",
-    "gender": "男",
-    "level": "金牌票代",
-    "wechat": "sword_heart_2024",
-    "qq": "678901234"
-  },
-  {
-    "id": "007",
-    "cn": "月光下的猫",
-    "gender": "女",
-    "level": "铜牌票代",
-    "wechat": "moonlight_cat",
-    "qq": "789012345"
-  },
-  {
-    "id": "008",
-    "cn": "漫展达人",
-    "gender": "男",
-    "level": "银牌票代",
-    "wechat": "comic_master",
-    "qq": "890123456"
+    "level": "官方票代",
+    "wechat": "qq1289612133",
+    "qq": "2970213142"
   }
 ]
