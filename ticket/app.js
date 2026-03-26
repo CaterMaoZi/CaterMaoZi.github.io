@@ -35,7 +35,7 @@ async function handleQuery() {
   
   try {
     // 发送查询请求
-    const response = await fetch(`/api/query?cn=${encodeURIComponent(cn)}`);
+    const response = await fetch(`https://catermaozi.github.io/ticket/api/query?cn=${encodeURIComponent(cn)}`);
     const data = await response.json();
     
     // 显示结果
