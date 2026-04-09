@@ -52,6 +52,6 @@ const questions = [
 ];
 
 const specialQuestions = [
-  { id: 'drink_gate_q1', special: true, kind: 'drink_gate', text: '您平时有什么爱好？', options: [{ label: '吃喝拉撒', value: 1 }, { label: '艺术爱好', value: 2 }, { label: '撕逼', value: 3 }, { label: '玩原神', value: 4 }] },
+  { id: 'drink_gate_q1', special: true, kind: 'drink_gate', text: '您平时有什么爱好？', options: [{ label: '撕逼', value: 1 }, { label: '喝魔爪', value: 2 }, { label: '喝酒', value: 3 }, { label: '玩原神', value: 4 }] },
   { id: 'drink_gate_q2', special: true, kind: 'drink_trigger', text: '您对饮酒的态度是？', options: [{ label: '小酌怡情，喝不了太多。', value: 1 }, { label: '我习惯将白酒灌在保温杯，当白开水喝，酒精令我信服。', value: 2 }] }
 ];
