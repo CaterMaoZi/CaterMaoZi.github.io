@@ -1,0 +1,73 @@
+const NORMAL_TYPES = [
+  // IKUN (爱坤) 变体组 - 目标 ~25%
+  { code: "IKUN", pattern: "HHH-HMH-MHH-HHH-MHM" },
+  { code: "IKUN", pattern: "HHM-HMH-MHH-HHH-MHM" },
+  { code: "IKUN", pattern: "HHH-HMH-MHH-MHH-MHM" },
+  { code: "IKUN", pattern: "HMH-HMH-MHH-HHH-MHM" },
+  { code: "IKUN", pattern: "HHH-HMH-MHH-HHH-MHH" },
+  { code: "IKUN", pattern: "HHH-HMH-MHH-HHH-HHM" },
+  { code: "IKUN", pattern: "HHH-HMH-MHH-HMH-MHM" },
+  { code: "IKUN", pattern: "HHH-HMH-MHH-HHH-HMH" },
+  { code: "IKUN", pattern: "HHH-HMM-MHH-HHH-MHM" },
+  { code: "ATM-er", pattern: "HHH-HHM-HHH-HMH-MHL" },
+  { code: "MHA-er", pattern: "MHM-MMH-MHM-HMH-LHL" },
+  // hot-chicken (V圈热机) 变体组 - 目标 ~15%
+  { code: "hot-chicken", pattern: "HHH-HMH-MMH-HHH-LHL" },
+  { code: "hot-chicken", pattern: "HHH-HHH-MMH-HHH-LHL" },
+  { code: "hot-chicken", pattern: "HHH-HMH-MHH-HHH-LHL" },
+  { code: "hot-chicken", pattern: "HMH-HMH-MMH-HHH-LHL" },
+  { code: "hot-chicken", pattern: "HHH-HMH-MMH-HMH-LHL" },
+  { code: "hot-chicken", pattern: "HHH-HMH-MMH-HHH-LHM" },
+  { code: "THAN-K", pattern: "MHM-HMM-HHM-MMH-MHL" },
+  { code: "OH-NO", pattern: "HHL-LMH-LHH-HHM-LHL" },
+  { code: "GOGO", pattern: "HHM-HMH-MMH-HHH-MHM" },
+  { code: "SEXY", pattern: "HMH-HHL-HMM-HMM-HLH" },
+  { code: "LOVE-R", pattern: "MLH-LHL-HLH-MLM-MLH" },
+  { code: "MUM", pattern: "MMH-MHL-HMM-LMM-HLL" },
+  // CartierRR (吉他张) 变体组 - 目标 ~15%
+  { code: "CartierRR", pattern: "HLM-MML-MLM-MLM-HLH" },
+  { code: "CartierRR", pattern: "HLM-MHL-MLM-MLM-HLH" },
+  { code: "CartierRR", pattern: "HLM-MML-HLM-MLM-HLH" },
+  { code: "CartierRR", pattern: "HMM-MML-MLM-MLM-HLH" },
+  { code: "CartierRR", pattern: "HLM-MML-MLM-MLM-MHH" },
+  { code: "OJBK", pattern: "MMH-MMM-HML-LMM-MML" },
+  { code: "MALO", pattern: "MLH-MHM-MLH-MLH-LMH" },
+  { code: "JOKE-R", pattern: "LLH-LHL-LML-LLL-MLM" },
+  { code: "WOC!", pattern: "HHL-HMH-MMH-HHM-LHH" },
+  { code: "THIN-K", pattern: "HHL-HMH-MLH-MHM-LHH" },
+  // SYNB (少羽) 变体组 - 目标 ~15%
+  { code: "SYNB", pattern: "HHL-HLH-LMM-HHM-LHH" },
+  { code: "SYNB", pattern: "HHH-HLH-LMM-HHM-LHH" },
+  { code: "SYNB", pattern: "HHL-HHH-LMM-HHM-LHH" },
+  { code: "SYNB", pattern: "HHL-HLH-LMH-HHM-LHH" },
+  { code: "SYNB", pattern: "HHL-HLH-LMM-HHL-LHH" },
+  { code: "SYNB", pattern: "HHL-HLH-LMM-HHM-MHH" },
+  { code: "ZZZZ", pattern: "MHL-MLH-LML-MML-LHM" },
+  { code: "POOR", pattern: "HHL-MLH-LMH-HHH-LHL" },
+  { code: "MONK", pattern: "HHL-LLH-LLM-MML-LHM" },
+  { code: "IMSB", pattern: "LLM-LMM-LLL-LLL-MLM" },
+  { code: "SOLO", pattern: "LML-LLH-LHL-LML-LHM" },
+  { code: "FUCK", pattern: "MLL-LHL-LLM-MLL-HLH" },
+  { code: "DEAD", pattern: "LLL-LLM-LML-LLL-LHM" },
+  { code: "IMFW", pattern: "LLH-LHL-LML-LLL-MLL" }
+];
+
+const DIM_EXPLANATIONS = {
+  "S1": { L: "对自己下手比别人还狠，夸你两句你都想先验明真伪。", M: "自信值随天气波动，顺风能飞，逆风先缩。", H: "心里对自己大致有数，不太会被路人一句话打散。" },
+  "S2": { L: "内心频道雪花较多，常在\u201C我是谁\u201D里循环缓存。", M: "平时还能认出自己，偶尔也会被情绪临时换号。", H: "对自己的脾气、欲望和底线都算门儿清。" },
+  "S3": { L: "更在意舒服和安全，没必要天天给人生开冲刺模式。", M: "想上进，也想躺会儿，价值排序经常内部开会。", H: "很容易被目标、成长或某种重要信念推着往前。" },
+  "E1": { L: "感情里警报器灵敏，已读不回都能脑补到大结局。", M: "一半信任，一半试探，感情里常在心里拉锯。", H: "更愿意相信关系本身，不会被一点风吹草动吓散。" },
+  "E2": { L: "感情投入偏克制，心门不是没开，是门禁太严。", M: "会投入，但会给自己留后手，不至于全盘梭哈。", H: "一旦认定就容易认真，情绪和精力都给得很足。" },
+  "E3": { L: "容易黏人也容易被黏，关系里的温度感很重要。", M: "亲密和独立都要一点，属于可调节型依赖。", H: "空间感很重要，再爱也得留一块属于自己的地。" },
+  "A1": { L: "看世界自带防御滤镜，先怀疑，再靠近。", M: "既不天真也不彻底阴谋论，观望是你的本能。", H: "更愿意相信人性和善意，遇事不急着把世界判死刑。" },
+  "A2": { L: "规则能绕就绕，舒服和自由往往排在前面。", M: "该守的时候守，该变通的时候也不死磕。", H: "秩序感较强，能按流程来就不爱即兴炸场。" },
+  "A3": { L: "意义感偏低，容易觉得很多事都像在走过场。", M: "偶尔有目标，偶尔也想摆烂，人生观处于半开机。", H: "做事更有方向，知道自己大概要往哪边走。" },
+  "Ac1": { L: "做事先考虑别翻车，避险系统比野心更先启动。", M: "有时想赢，有时只想别麻烦，动机比较混合。", H: "更容易被成果、成长和推进感点燃。" },
+  "Ac2": { L: "做决定前容易多转几圈，脑内会议常常超时。", M: "会想，但不至于想死机，属于正常犹豫。", H: "拍板速度快，决定一下就不爱回头磨叽。" },
+  "Ac3": { L: "执行力和死线有深厚感情，越晚越像要觉醒。", M: "能做，但状态看时机，偶尔稳偶尔摆。", H: "推进欲比较强，事情不落地心里都像卡了根刺。" },
+  "So1": { L: "社交启动慢热，主动出击这事通常得攒半天气。", M: "有人来就接，没人来也不硬凑，社交弹性一般。", H: "更愿意主动打开场子，在人群里不太怕露头。" },
+  "So2": { L: "关系里更想亲近和融合，熟了就容易把人划进内圈。", M: "既想亲近又想留缝，边界感看对象调节。", H: "边界感偏强，靠太近会先本能性后退半步。" },
+  "So3": { L: "表达更直接，心里有啥基本不爱绕。", M: "会看气氛说话，真实和体面通常各留一点。", H: "对不同场景的自我切换更熟练，真实感会分层发放。" }
+};
+
+const dimensionOrder = ['S1','S2','S3','E1','E2','E3','A1','A2','A3','Ac1','Ac2','Ac3','So1','So2','So3'];

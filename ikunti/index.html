@@ -1,1 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IKUN-SBTI 人格测试</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <div class="shell">
+    <!-- Intro Screen -->
+    <section id="intro" class="screen active">
+      <div class="hero card hero-minimal">
+        <div class="eyebrow">IKUN-SBTI</div>
+        <h1>MBTI已经过时，<br>IKUN-SBTI来了。</h1>
+        <p class="sub">25种人格类型 · 15维度评分 · 全中文娱乐测试<br>做完才知道自己有多离谱</p>
+        <div class="hero-actions hero-actions-single">
+          <button id="startBtn" class="btn-primary">开始测试</button>
+        </div>
+        <p class="tip">做完所有题目才会放行，世界已经够乱了，起码把题做完整。</p>
+        <div class="expand-col">
+          <h3>和作者扩列</h3>
+          <img src="https://vip.123pan.cn/1821558579/ymjew503t0m000dd4uwajut2i2669tblDIYvDIJyBdJ0BGxwAdYz.jpg" alt="和作者扩列" class="expand-qr expand-qr-clickable">
+        </div>
+      </div>
+    </section>
 
+    <!-- Test Screen -->
+    <section id="test" class="screen">
+      <div class="test-wrap card">
+        <div class="topbar">
+          <div class="progress"><span id="progressBar"></span></div>
+          <div class="progress-text" id="progressText">0 / 31</div>
+        </div>
+        <div id="questionList" class="question-list"></div>
+        <div class="actions-bottom">
+          <div class="hint" id="testHint">全选完才会放行。世界已经够乱了，起码把题做完整。</div>
+          <div style="display:flex; gap:12px; flex-wrap:wrap;">
+            <button id="backIntroBtn" class="btn-secondary">返回首页</button>
+            <button id="submitBtn" class="btn-primary" disabled>提交并查看结果</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Result Screen -->
+    <section id="result" class="screen">
+      <div class="result-wrap card">
+        <div class="result-layout">
+          <div class="result-top">
+            <div class="poster-box" id="posterBox">
+              <img id="posterImage" class="poster-image" alt="人格结果图">
+              <div class="poster-emoji" id="posterEmoji"></div>
+              <div id="posterCaption" class="poster-caption">怎么样，被我拿捏了吧？</div>
+            </div>
+            <div class="type-box">
+              <div class="type-kicker" id="resultModeKicker">你的主类型</div>
+              <div class="type-name" id="resultTypeName">IKUN（爱坤）</div>
+              <div class="match" id="matchBadge">匹配度 92%</div>
+              <button id="shareBtn" class="btn-share">将结果分享到朋友圈</button>
+              <div class="type-subname" id="resultTypeSub">系统备注会显示在这里。</div>
+            </div>
+          </div>
+
+          <div class="analysis-box">
+            <h3>该人格的简单解读</h3>
+            <p id="resultDesc"></p>
+          </div>
+
+          <div class="dim-box">
+            <h3>十五维度评分</h3>
+            <div id="dimList" class="dim-list"></div>
+          </div>
+
+          <div class="note-box">
+            <h3>友情提示</h3>
+            <p id="funNote">本测试纯属作者乐子人做出来的，不要相信任何东西，别拿它当诊断、面试、相亲、分手、招魂、算命或人生判决书。说你是什么你也别信</p>
+          </div>
+
+          <details class="author-box" open>
+            <summary>和我扩列</summary>
+            <div class="author-content">
+              <p>原作者：b站up主蛆肉儿串儿（UID417038183）</p>
+              <p>IKUN版本修改作者：猫子</p>
+              <p><img src="https://vip.123pan.cn/1821558579/ymjew503t0m000dd4uwajut2i2669tblDIYvDIJyBdJ0BGxwAdYz.jpg" alt="和我扩列" class="expand-qr expand-qr-clickable"></p>
+            </div>
+          </details>
+        </div>
+
+        <div class="result-actions">
+          <div style="display:flex; gap:12px; flex-wrap:wrap;">
+            <button id="restartBtn" class="btn-secondary">重新测试</button>
+            <button id="toTopBtn" class="btn-primary">回到首页</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="scripts/data.js"></script>
+  <script src="scripts/types.js"></script>
+  <script src="scripts/patterns.js"></script>
+  <script src="scripts/images.js"></script>
+  <script src="scripts/app.js"></script>
+</body>
+</html>
