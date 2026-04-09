@@ -311,7 +311,7 @@ document.getElementById('toTopBtn').addEventListener('click', function() { showS
 document.getElementById('shareBtn').addEventListener('click', function() {
   var typeName = document.getElementById('resultTypeName').textContent;
   var domain = window.location.hostname;
-  var text = '\u6211\u5728\u3010IKUN-SBTI\u3011\u6d4b\u8bd5\u4e2d\u53d6\u5f97\u3010' + typeName + '\u3011\u7ed3\u679c\uff0c\u70b9\u51fb\u6d4b\u8bd5\uff1ahttps://' + domain;
+  var text = '\u6211\u5728\u3010IKUN-SBTI\u3011\u6d4b\u8bd5\u4e2d\u53d6\u5f97\u3010' + typeName + '\u3011\u7ed3\u679c\uff0c\u70b9\u51fb\u6d4b\u8bd5\uff1ahttps://acg.mcres.cn/ikunti/';
   if (navigator.clipboard && navigator.clipboard.writeText) {
     navigator.clipboard.writeText(text).then(function() {
       showShareModal();
