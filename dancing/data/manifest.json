@@ -12,8 +12,8 @@
       "path": "data/1",
       "entries": [
         {
-          "id": "2026-05-08",
-          "label": "2026年5月8日",
+          "id": "2024-12-10",
+          "label": "2024年12月10日",
           "tags": [
             {
               "text": "纯宅舞",
@@ -124,6 +124,142 @@
                 "duration": "59分06秒",
                 "format": "MP3",
                 "loudness": "未平均",
+                "bitrate": "128 kbps",
+                "sampleRate": "48000 Hz",
+                "channels": "立体声（2声道）"
+              },
+              "url": "https://pan.baidu.com/s/example-link-here"
+            }
+          ]
+        },
+        {
+          "id": "2024-12-28",
+          "label": "2024年12月28日",
+          "tags": [
+            {
+              "text": "多宅舞",
+              "color": "#2e7d32",
+              "bg": "#e8f5e9"
+            },
+            {
+              "text": "带整活",
+              "color": "#da9c54",
+              "bg": "#e8f5e9"
+            }
+          ],
+          "path": "data/1/3",
+          "items": [
+            {
+              "id": "1",
+              "path": "data/1/3/1",
+              "soundlists": [
+                "神的随波逐流",
+                "Hack-四十三秒片段",
+                "混沌布吉",
+                "医学",
+                "Bloody Groovy-30-55秒",
+                "INTERNET OVERDOSE-一分四十五秒片段",
+                "不可思议的Wonders-一分钟片段",
+                "极乐净土",
+                "贱侠-五十八秒片段",
+                "人狂热症-一分钟片段",
+                "时光代理人 Surprising Click-一分十秒片段",
+                "这么可爱真是抱歉",
+                "书记舞",
+                "怪物(Monster)-YOASOBI-一分钟片段",
+                "シネマ(电影院 cinema)",
+                "进化之夏",
+                "太阳系Disco",
+                "Blessing-一分三十秒片段",
+                "Aiscream 片段",
+                "Bling-Bang-Bang-Born-46秒-1分28",
+                "D/N/A",
+                "I I I(III)-一分十三秒",
+                "KING-一分二十秒片段",
+                "前锋起舞",
+                "Love it-二分十二秒",
+                "MOTTAI-一分九秒",
+                "No brand Girls一心一教-一分十七秒",
+                "START：DASH!!-节选片段",
+                "Villain(反派角色)-一分钟片段",
+                "ビビデバ(BIBBIDIBA) 星街彗星-副歌片段",
+                "不眠之夜-一分二十六秒",
+                "人狂热症-一分钟片段",
+                "唱(片段)",
+                "好友革命-一分十五秒",
+                "寄明月-一分五十三秒",
+                "恋爱循环-一分三十一秒片段",
+                "抚摸抚摸-一分四十七秒片段",
+                "苦巧克力装饰-一分十秒",
+                "角色扮演游戏(RPG!)-片段"
+              ],
+              "info": {
+                "title": "2024年12月28日",
+                "size": "54.6 MB",
+                "duration": "1小时00分21秒",
+                "format": "MP3",
+                "loudness": "未平均",
+                "bitrate": "128 kbps",
+                "sampleRate": "48000 Hz",
+                "channels": "立体声（2声道）"
+              },
+              "url": "https://pan.baidu.com/s/example-link-here"
+            }
+          ]
+        },
+        {
+          "id": "2025-05-23",
+          "label": "2025年05月23日",
+          "tags": [
+            {
+              "text": "纯宅舞",
+              "color": "#2e7d32",
+              "bg": "#e8f5e9"
+            }
+          ],
+          "path": "data/1/4",
+          "items": [
+            {
+              "id": "1",
+              "path": "data/1/4/1",
+              "soundlists": [
+                "Blink gone",
+                "杀掉她啦",
+                "赛博朋克死亡男孩",
+                "心灵之蛋",
+                "我最可爱的地方",
+                "more jump more",
+                "快乐合成器",
+                "拼凑的断音",
+                "motto!!",
+                "偶像新锐队",
+                "星座密码",
+                "像神一样呐",
+                "hack",
+                "绝对敌对超级讨厌",
+                "king",
+                "微笑调查队",
+                "角色扮演游戏",
+                "这么可爱真是抱歉",
+                "樱桃炸弹",
+                "bling bang bang born",
+                "抚摸抚摸",
+                "晴天好心情",
+                "start:dash",
+                "猫耳开关",
+                "大家一起喜洋洋",
+                "III",
+                "画个圆圆的地球",
+                "寄明月",
+                "混沌布吉",
+                "神的随波逐流"
+              ],
+              "info": {
+                "title": "2025年05月23日",
+                "size": "55.2 MB",
+                "duration": "1小时00分47秒",
+                "format": "MP3",
+                "loudness": "-9 LUFS",
                 "bitrate": "128 kbps",
                 "sampleRate": "48000 Hz",
                 "channels": "立体声（2声道）"
