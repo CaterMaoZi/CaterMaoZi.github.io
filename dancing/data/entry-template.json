@@ -1,0 +1,38 @@
+{
+  "_comment": "=== 新增时长分类模板：复制此文件内容到 data/catalog.json 中 durations 数组末尾即可 ===",
+  
+  "id": "2hour",
+  "name": "2小时",
+  "description": "约120分钟随舞歌单",
+  "entries": [
+    {
+      "id": "2026-XX-XX",
+      "label": "2026年X月X日",
+      "tags": [
+        { "text": "仅宅舞",  "color": "#2e7d32", "bg": "#e8f5e9" },
+        { "text": "带整活",  "color": "#1565c0", "bg": "#e3f2fd" },
+        { "text": "带抖舞",  "color": "#e65100", "bg": "#fff3e0" },
+        { "text": "高燃",    "color": "#c62828", "bg": "#ffebee" },
+        { "text": "怀旧",    "color": "#6d4c41", "bg": "#efebe9" },
+        { "text": "纯V家",   "color": "#00838f", "bg": "#e0f7fa" },
+        { "text": "混合",    "color": "#6a1b9a", "bg": "#f3e5f5" }
+      ],
+      "playlist": [
+        "01. 歌曲名 — 作者/歌手",
+        "02. 歌曲名 — 作者/歌手",
+        "03. 歌曲名 — 作者/歌手",
+        "（继续添加...）"
+      ],
+      "fileInfo": {
+        "size": "XXX MB",
+        "loudness": "-12 LUFS",
+        "format": "MP3",
+        "duration": "X:XX:XX",
+        "bitrate": "320 kbps",
+        "sampleRate": "44100 Hz",
+        "channels": "立体声（2声道）"
+      },
+      "downloadUrl": "https://pan.baidu.com/s/你的下载链接"
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "site": {
+    "name": "漫喵-预制随舞音频选择目录",
+    "notice": "⚠ 防骗提醒：如您不是在以下官方渠道——闲鱼ID：猫子Miowoo / 微信号：TheCater813 / QQ号：1637408826——购买此随舞音频链接，请添加任意联系方式举报倒卖。官方售价 168元/永久使用+服务九折优惠。举报有奖！",
+    "footer": "© 漫喵随舞音频 · 仅供已购买用户使用"
+  },
+  "durations": [
+    {
+      "id": "1hour",
+      "name": "1小时",
+      "description": "约60分钟随舞歌单",
+      "entries": [
+        {
+          "id": "2026-05-08",
+          "label": "2026年5月8日",
+          "tags": [
+            { "text": "仅宅舞", "color": "#2e7d32", "bg": "#e8f5e9" },
+            { "text": "高燃", "color": "#c62828", "bg": "#ffebee" }
+          ],
+          "playlist": [
+            "01. 这么可爱真是抱歉 — HoneyWorks",
+            "02. 拼凑的断音 — 初音ミク",
+            "03. KING — Kanaria",
+            "04. 咚咚哔哔咚 — Omoi",
+            "05. BIBBIDIBA — 初音ミク",
+            "06. 妄想感伤代偿联盟 — DECO*27",
+            "07. 太阳系迪斯科 — ナユタン星人",
+            "08. 千本樱 — 黑兔P",
+            "09. INTERNET OVERDOSE — AI罗",
+            "10. More! Jump! More! — 初音ミク",
+            "11. Shadow Shadow — DECO*27",
+            "12. Bling-Bang-Bang-Born — Creepy Nuts"
+          ],
+          "fileInfo": {
+            "size": "156 MB",
+            "loudness": "-12 LUFS",
+            "format": "MP3",
+            "duration": "1:02:30",
+            "bitrate": "320 kbps",
+            "sampleRate": "44100 Hz",
+            "channels": "立体声（2声道）"
+          },
+          "downloadUrl": "https://pan.baidu.com/s/example-link-here"
+        },
+        {
+          "id": "2026-04-09",
+          "label": "2026年4月9日",
+          "tags": [
+            { "text": "带整活", "color": "#1565c0", "bg": "#e3f2fd" },
+            { "text": "带抖舞", "color": "#e65100", "bg": "#fff3e0" }
+          ],
+          "playlist": [
+            "01. 医学 — 初音ミク",
+            "02. 如何爱的如此深 — GUMI",
+            "03. 微笑调查官 — 初音ミク",
+            "04. CH4NGE — Giga",
+            "05. 幽灵法则 — DECO*27",
+            "06. 机器人的芯 — 初音ミク",
+            "07. Beyond the way — Giga",
+            "08. Flyer — Chinozo",
+            "09. 循环 — 初音ミク",
+            "10. Casino — Azari",
+            "11. 伪人类40号 — 初音ミク",
+            "12. 火箭男孩 — 初音ミク"
+          ],
+          "fileInfo": {
+            "size": "142 MB",
+            "loudness": "-12 LUFS",
+            "format": "MP3",
+            "duration": "0:58:15",
+            "bitrate": "320 kbps",
+            "sampleRate": "44100 Hz",
+            "channels": "立体声（2声道）"
+          },
+          "downloadUrl": "https://pan.baidu.com/s/example-link-here"
+        }
+      ]
+    },
+    {
+      "id": "1.5hour",
+      "name": "1.5小时",
+      "description": "约90分钟随舞歌单",
+      "entries": [
+        {
+          "id": "2026-04-25",
+          "label": "2026年4月25日",
+          "tags": [
+            { "text": "仅宅舞", "color": "#2e7d32", "bg": "#e8f5e9" }
+          ],
+          "playlist": [
+            "01. そんなの神話辞典 — 初音ミク",
+            "02. 心拍数0822 — 初音ミク",
+            "03. 太阳系迪斯科 — ナユタン星人",
+            "04. 恋爱裁判 — 40mP",
+            "05. 不知醉 — 初音ミク",
+            "06. 病名为爱 — Neru",
+            "07. 今天也是晴天 — GUMI",
+            "08. 太阳のラ — 初音ミク",
+            "09. 疑心暗鬼 — 初音ミク",
+            "10. 泣き虫 — 初音ミク",
+            "11. メリュー — n-buna",
+            "12. 透明エレジー — n-buna",
+            "13. ヒバナ — DECO*27",
+            "14. シャルル — balloon",
+            "15. 乙女解剖 — DECO*27"
+          ],
+          "fileInfo": {
+            "size": "195 MB",
+            "loudness": "-12 LUFS",
+            "format": "MP3",
+            "duration": "1:28:45",
+            "bitrate": "320 kbps",
+            "sampleRate": "44100 Hz",
+            "channels": "立体声（2声道）"
+          },
+          "downloadUrl": "https://pan.baidu.com/s/example-link-here"
+        }
+      ]
+    },
+    {
+      "id": "2hour",
+      "name": "2小时",
+      "description": "约120分钟随舞歌单",
+      "entries": []
+    }
+  ]
+}
