@@ -12,6 +12,88 @@
       "path": "data/1",
       "entries": [
         {
+          "id": "2025-07-04",
+          "label": "2025年07月04日-视频",
+          "tags": [
+            {
+              "text": "视频",
+              "color": "#c7fe2f",
+              "bg": "#e8f5e9"
+            },
+            {
+              "text": "纯宅舞",
+              "color": "#2e7d32",
+              "bg": "#e8f5e9"
+            }
+          ],
+          "path": "data/1/6",
+          "items": [
+            {
+              "id": "1",
+              "path": "data/1/6/1",
+              "soundlists": [
+                "像神一样呐",
+                "混沌布吉",
+                "king",
+                "肃静！萝莉神的安魂曲",
+                "恋爱循环",
+                "抚摸抚摸",
+                "呐呐呐",
+                "神的随波逐流",
+                "变身士豆",
+                "微笑调查队",
+                "beyond the way",
+                "乐意效劳",
+                "劣等上等",
+                "威风堂堂",
+                "寄明月",
+                "想成为你的恋人",
+                "杀掉她啦",
+                "我最可爱的地方",
+                "女主角育成计划",
+                "好友革命",
+                "踊",
+                "快乐合成器",
+                "苦巧克力装饰",
+                "Bling-Bang-Bang-Born",
+                "小埋体操",
+                "loveit",
+                "爱杀宝贝",
+                "拼凑的断音",
+                "hack",
+                "世界第一的公主殿下",
+                "overdose",
+                "唱",
+                "イガク(医学)",
+                "太阳系disco",
+                "more jump more",
+                "PokeDance",
+                "星期五的早安",
+                "D/N/A",
+                "RPG踢踏舞",
+                "不可思议的Wonders",
+                "start:dash!!",
+                "love potion",
+                "花间酒",
+                "贱侠",
+                "45秒能做什么呢",
+                "视奸"
+              ],
+              "info": {
+                "title": "2025年07月04日-视频",
+                "size": "5.41 GB",
+                "duration": "59分57秒",
+                "format": "MP3",
+                "loudness": "未平衡",
+                "bitrate": "256 kbps",
+                "sampleRate": "44100 Hz",
+                "channels": "立体声（2声道）"
+              },
+              "url": "https://1821558579.share.123pan.cn/123pan/HRhfjv-61cuv"
+            }
+          ]
+        },
+        {
           "id": "2025-12-04",
           "label": "2025年12月04日-中文",
           "tags": [
@@ -580,6 +662,89 @@
       "description": "点击查看两小时(+-3分钟)随舞歌单",
       "path": "data/3",
       "entries": [
+        {
+          "id": "2025-10-03",
+          "label": "2025年10月03日-视频",
+          "tags": [
+            {
+              "text": "视频",
+              "color": "#c7fe2f",
+              "bg": "#e8f5e9"
+            },
+            {
+              "text": "纯宅舞",
+              "color": "#2e7d32",
+              "bg": "#e8f5e9"
+            }
+          ],
+          "path": "data/3/2",
+          "items": [
+            {
+              "id": "1",
+              "path": "data/3/2/1",
+              "soundlists": [
+                "世界第一公主殿下",
+                "拼凑的断音",
+                "Overdose",
+                "唱",
+                "医学",
+                "太阳系Disco",
+                "More!Jump!More!",
+                "Midnight call",
+                "像神一样呐",
+                "避风港",
+                "Blink Gone",
+                "赛博朋克死亡男孩",
+                "心灵之蛋",
+                "我最可爱的地方",
+                "快乐合成器",
+                "MOTTO!!",
+                "星座密码",
+                "Hack",
+                "绝对敌对超级讨厌",
+                "角色扮演游戏",
+                "Start:Dash!!",
+                "猫耳开关",
+                "前锋起舞",
+                "III",
+                "Fusion",
+                "INTERNET OVERDOSE",
+                "刹那的爱",
+                "雪色光晕",
+                "视奸",
+                "贱侠",
+                "呐呐呐",
+                "ID Smile",
+                "Blessing",
+                "如今的我们",
+                "Surprising Click",
+                "No Brand Girls",
+                "人狂热症",
+                "偶像",
+                "启明星",
+                "降下诸罚AAAAA!",
+                "恋",
+                "鹿乃子乃子虎视眈眈OP",
+                "Mottai",
+                "爱我爱我爱我",
+                "BIBBIDIBBA",
+                "非人哉",
+                "花间酒"
+              ],
+              "info": {
+                "title": "2025年10月03日-视频",
+                "size": "11.13 GB",
+                "duration": "2小时01分34秒",
+                "format": "MP3",
+                "loudness": "未平衡",
+                "bitrate": "256 kbps",
+                "sampleRate": "44100 Hz",
+                "channels": "立体声（2声道）"
+              },
+              "url": "https://1821558579.share.123pan.cn/123pan/HRhfjv-dj0Kv"
+            }
+          ]
+        },
         {
           "id": "2024-12-08",
           "label": "2024年12月08日",
