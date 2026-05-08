@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="漫喵-预制随舞音频选择目录（预览版）">
+<meta name="theme-color" content="#6366f1">
+<title>漫喵随舞 · 预览版</title>
+<link rel="stylesheet" href="../dancing/assets/css/style.css?v=2">
+</head>
+<body>
+
+<div class="app-header">
+  <h1>🐱 漫喵 · 预制随舞音频选择目录 <span style="font-size:.75rem;opacity:.8">[预览版]</span></h1>
+</div>
+
+<main class="app-main">
+  <!-- Preview Notice -->
+  <div class="notice-banner" id="notice-banner" style="background:linear-gradient(135deg,#fef2f2,#fecaca);border-color:#dc2626;color:#991b1b;">
+    <span id="notice-text">🔒 预览版 · 仅展示目录结构，下载功能需购买后解锁</span>
+  </div>
+
+  <nav class="breadcrumb" id="breadcrumb" aria-label="面包屑导航"></nav>
+
+  <div id="app-content">
+    <div class="loading"><div class="spinner"></div><p>加载中...</p></div>
+  </div>
+</main>
+
+<footer class="app-footer">
+  <span id="footer-text">© 漫喵随舞音频 · 预览版</span>
+</footer>
+
+<script src="../dancing/assets/js/main.js?v=2"></script>
+<script>
+// 预览版覆盖: 下载按钮 → 购买弹窗
+(function() {
+  var origOpenModal = window._origOpenModal;
+
+  // 等待原 main.js 加载完成后，替换下载按钮行为
+  function patchDownload() {
+    var btns = document.querySelectorAll('.btn-download');
+    btns.forEach(function(btn) {
+      btn.removeAttribute('href');
+      btn.removeAttribute('target');
+      btn.className = 'btn btn-outline';
+      btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg> 购买后下载';
+      btn.onclick = showPurchaseModal;
+    });
+  }
+
+  function showPurchaseModal() {
+    var modal = document.querySelector('.modal-overlay');
+    if (modal) modal.remove();
+
+    var overlay = document.createElement('div');
+    overlay.className = 'modal-overlay';
+    overlay.setAttribute('role', 'dialog');
+    overlay.setAttribute('aria-label', '购买信息');
+    overlay.innerHTML = '<div class="modal-content">' +
+      '<div class="modal-header"><h2>🔒 预览版限制</h2><button class="modal-close" aria-label="关闭">✕</button></div>' +
+      '<div class="modal-body">' +
+        '<p style="font-size:.95rem;margin-bottom:16px;color:#991b1b">下载功能需要购买正式版后解锁</p>' +
+        '<div style="background:#f3f4f6;border-radius:8px;padding:14px 16px;margin-bottom:12px">' +
+          '<div style="font-weight:600;margin-bottom:8px">📦 官方售价</div>' +
+          '<div style="font-size:1.3rem;font-weight:700;color:#6366f1">168元</div>' +
+          '<div style="font-size:.85rem;color:#64748b">永久使用 + 服务九折优惠</div>' +
+        '</div>' +
+        '<div style="background:#fef3c7;border-radius:8px;padding:14px 16px">' +
+          '<div style="font-weight:600;margin-bottom:8px">📞 官方购买渠道</div>' +
+          '<div style="font-size:.9rem;line-height:1.8">' +
+            '<div>🐟 闲鱼ID：<strong>猫子Miowoo</strong></div>' +
+            '<div>💬 微信：<strong>TheCater813</strong></div>' +
+            '<div>🐧 QQ：<strong>1637408826</strong></div>' +
+          '</div>' +
+        '</div>' +
+        '<div style="margin-top:12px;font-size:.82rem;color:#64748b">如您已购买，请从购买渠道获取正式版访问链接</div>' +
+      '</div></div>';
+    document.body.appendChild(overlay);
+
+    var closeBtn = overlay.querySelector('.modal-close');
+    closeBtn.onclick = function() {
+      overlay.classList.add('closing');
+      setTimeout(function() { if (overlay.parentNode) overlay.remove(); }, 150);
+    };
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) {
+        overlay.classList.add('closing');
+        setTimeout(function() { if (overlay.parentNode) overlay.remove(); }, 150);
+      }
+    });
+    closeBtn.focus();
+  }
+
+  // 用 MutationObserver 监听内容变化, 自动 patch 下载按钮
+  var observer = new MutationObserver(function() {
+    patchDownload();
+  });
+  observer.observe(document.getElementById('app-content'), { childList: true, subtree: true });
+
+  // 首次 patch
+  setTimeout(patchDownload, 500);
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      var modal = document.querySelector('.modal-overlay');
+      if (modal) {
+        modal.classList.add('closing');
+        setTimeout(function() { if (modal.parentNode) modal.remove(); }, 150);
+      }
+    }
+  });
+})();
+</script>
+</body>
+</html>
