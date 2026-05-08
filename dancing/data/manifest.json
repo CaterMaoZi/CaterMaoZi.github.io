@@ -309,7 +309,7 @@
                 "size": "54.6 MB",
                 "duration": "1小时00分21秒",
                 "format": "MP3",
-                "loudness": "未平均",
+                "loudness": "未平衡",
                 "bitrate": "128 kbps",
                 "sampleRate": "48000 Hz",
                 "channels": "立体声（2声道）"
@@ -372,7 +372,7 @@
                 "size": "53.4 MB",
                 "duration": "59分06秒",
                 "format": "MP3",
-                "loudness": "未平均",
+                "loudness": "未平衡",
                 "bitrate": "128 kbps",
                 "sampleRate": "48000 Hz",
                 "channels": "立体声（2声道）"
@@ -440,7 +440,7 @@
                 "size": "134 MB",
                 "duration": "59分45秒",
                 "format": "MP3",
-                "loudness": "未平均",
+                "loudness": "未平衡",
                 "bitrate": "320 kbps",
                 "sampleRate": "48000 Hz",
                 "channels": "立体声（2声道）"
