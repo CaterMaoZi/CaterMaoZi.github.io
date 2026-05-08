@@ -442,6 +442,10 @@ a:hover { text-decoration: underline; }
 }
 
 /* --- Warning Strip --- */
+.warn-red {
+  color: #dc2626;
+  font-weight: 600;
+}
 .warning-strip {
   background: #fef2f2;
   border: 1.5px solid #dc2626;
