@@ -104,7 +104,7 @@ function scanEntries(l1Path) {
   const entries = [];
   const dirs = fs.readdirSync(l1Path)
     .filter(d => isNumDir(d, l1Path))
-    .sort((a, b) => parseInt(a) - parseInt(b));
+    .sort((a, b) => parseInt(b) - parseInt(a));
 
   for (const l2 of dirs) {
     const l2Path = path.join(l1Path, l2);
