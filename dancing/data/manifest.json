@@ -16,14 +16,9 @@
           "label": "2026年5月8日",
           "tags": [
             {
-              "text": "仅宅舞",
+              "text": "纯宅舞",
               "color": "#2e7d32",
               "bg": "#e8f5e9"
-            },
-            {
-              "text": "高燃",
-              "color": "#c62828",
-              "bg": "#ffebee"
             }
           ],
           "path": "data/1/1",
