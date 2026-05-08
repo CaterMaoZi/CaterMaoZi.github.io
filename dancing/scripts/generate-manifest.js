@@ -64,10 +64,13 @@ function scanItems(l2Path) {
       path: relPath(l3Path)
     };
 
-    const slPath = path.join(l3Path, 'soundlists.json');
+    // soundlists.txt (一行一首, 自动转数组)
+    const slPath = path.join(l3Path, 'soundlists.txt');
     if (fs.existsSync(slPath)) {
-      const sl = readJSON(slPath);
-      if (sl) item.soundlists = sl;
+      const raw = readText(slPath);
+      if (raw) {
+        item.soundlists = raw.split('\n').map(function(l) { return l.trim(); }).filter(Boolean);
+      }
     }
 
     const infoPath = path.join(l3Path, 'info.json');

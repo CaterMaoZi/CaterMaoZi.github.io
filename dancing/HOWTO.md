@@ -31,7 +31,7 @@
 在日期目录下建子目录，例如 data/1/3/1/
 放入以下文件：
 
-soundlists.json  （顺序歌单，JSON 数组）
+soundlists.txt   （顺序歌单，一行一首，纯文本）
 info.json        （文件信息）
 url.txt          （下载链接，纯文本一行）
 cover.jpg        （可选封面，支持 jpg/png/webp）
