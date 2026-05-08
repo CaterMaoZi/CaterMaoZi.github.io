@@ -32,6 +32,7 @@
   }
 
   function matchRoute(path, parts) {
+    console.log('[route] match:', path, parts);
     // 首页精确匹配
     if (path === '/') return { handler: ROUTES['/'].handler, params: {} };
 
@@ -78,6 +79,7 @@
   /* ---- Render: Duration list (Level 1) ---- */
   function renderDurations() {
     var main = el('app-content');
+    console.log('[render] Durations, entries:', (catalog.durations || []).length);
     var durations = catalog.durations || [];
     el('breadcrumb').innerHTML = '';
 
@@ -105,6 +107,7 @@
 
   /* ---- Render: Date entry list (Level 2) ---- */
   function renderEntryList(params) {
+    console.log('[render] EntryList params:', params);
     var dId = params.id;
     var duration = findDuration(dId);
 
@@ -329,17 +332,22 @@
 
   /* ---- Init ---- */
   function init() {
+    console.log('[init] BASE:', BASE);
+    console.log('[init] manifest URL:', BASE + 'data/manifest.json');
     var main = el('app-content');
     main.innerHTML = '<div class="loading"><div class="spinner"></div><p>加载中...</p></div>';
 
     var xhr = new XMLHttpRequest();
     xhr.open('GET', BASE + 'data/manifest.json', true);
     xhr.onload = function () {
+      console.log('[init] XHR status:', xhr.status, 'len:', xhr.responseText.length);
       if (xhr.status >= 200 && xhr.status < 300) {
         try {
           catalog = JSON.parse(xhr.responseText);
+          console.log('[init] catalog OK, durations:', (catalog.durations || []).length);
         } catch (e) {
-          main.innerHTML = '<div class="error-state"><div class="error-icon">⚠</div><p>manifest.json 解析失败，请重新运行 scripts/generate-manifest.js</p></div>';
+          console.error('[init] JSON parse error:', e.message);
+          main.innerHTML = '<div class="error-state"><div class="error-icon">⚠</div><p>manifest.json 解析失败: ' + esc(e.message) + '</p></div>';
           return;
         }
         document.title = catalog.site ? catalog.site.name : '漫喵随舞目录';
@@ -353,12 +361,17 @@
     xhr.onerror = function () {
       main.innerHTML = '<div class="error-state"><div class="error-icon">⚠</div><p>网络错误，无法加载数据配置</p></div>';
     };
+    xhr.onerror = function () {
+      console.error('[init] XHR network error');
+      main.innerHTML = '<div class="error-state"><div class="error-icon">⚠</div><p>网络错误，无法加载数据。请刷新页面重试。</p></div>';
+    };
     xhr.send();
   }
 
   function route() {
     var hi = parseHash();
     var m = matchRoute(hi.path, hi.parts);
+    console.log('[route] dispatching to:', m.handler.name);
     if (!catalog && m.handler !== render404) {
       el('app-content').innerHTML = '<div class="loading"><div class="spinner"></div></div>';
       return;
@@ -366,7 +379,11 @@
     m.handler(m.params);
   }
 
-  window.addEventListener('hashchange', function () { if (catalog) route(); });
+  window.addEventListener('hashchange', function () {
+    console.log('[hashchange] new hash:', location.hash);
+    if (catalog) route();
+    else console.warn('[hashchange] catalog not loaded yet');
+  });
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && activeModal) closeModal();
   });
