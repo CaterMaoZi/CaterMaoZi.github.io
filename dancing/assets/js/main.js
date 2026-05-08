@@ -231,6 +231,7 @@
       h += '</div>';
     }
 
+    h += '<div class="warning-strip">🔴 禁止任何方式倒卖，违者全行业公开</div>';
     h += '<div class="detail-actions">';
     h += '<button class="btn btn-primary" onclick="showPlaylistModal(\'' + esc(dId) + '\',\'' + esc(eId) + '\',\'' + esc(itemId) + '\')" aria-label="查看顺序歌单"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/></svg> 查看顺序歌单</button>';
     h += '<button class="btn btn-secondary" onclick="showInfoModal(\'' + esc(dId) + '\',\'' + esc(eId) + '\',\'' + esc(itemId) + '\')" aria-label="文件信息"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg> 文件信息</button>';

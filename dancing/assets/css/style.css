@@ -441,6 +441,19 @@ a:hover { text-decoration: underline; }
   margin-top: 4px;
 }
 
+/* --- Warning Strip --- */
+.warning-strip {
+  background: #fef2f2;
+  border: 1.5px solid #dc2626;
+  border-radius: var(--radius-sm);
+  padding: 10px 16px;
+  margin: 16px 0;
+  color: #b91c1c;
+  font-size: .88rem;
+  font-weight: 600;
+  text-align: center;
+}
+
 /* --- Detail Cover --- */
 .detail-cover {
   width: 100%;
