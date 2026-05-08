@@ -8,7 +8,7 @@
     {
       "id": "1hour",
       "name": "1小时",
-      "description": "约60分钟随舞歌单",
+      "description": "点击查看一小时(+-3分钟)随舞歌单",
       "path": "data/1",
       "entries": [
         {
