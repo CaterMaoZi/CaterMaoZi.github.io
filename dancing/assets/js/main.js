@@ -32,13 +32,15 @@
   }
 
   function matchRoute(path, parts) {
+    // 首页精确匹配
+    if (path === '/') return { handler: ROUTES['/'].handler, params: {} };
+
     var keys = Object.keys(ROUTES);
     for (var k = 0; k < keys.length; k++) {
       var pattern = keys[k];
-      if (pattern === '/404') continue;
+      if (pattern === '/' || pattern === '/404') continue;
       var patParts = pattern.split('/').filter(Boolean);
-      if (patParts.length !== parts.length && pattern !== '/') continue;
-      if (pattern === '/' && path === '/') return { handler: ROUTES[pattern].handler, params: {} };
+      if (patParts.length !== parts.length) continue;
       var match = true;
       var params = {};
       for (var i = 0; i < patParts.length; i++) {
