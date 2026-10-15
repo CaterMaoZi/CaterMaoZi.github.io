@@ -191,16 +191,18 @@
 .match-item h3 { font-size: 15px; margin-bottom: 4px; }
 .match-tag { font-size: 12px; padding: 2px 10px; border-radius: 999px; background: var(--bg-soft); color: var(--ink-soft); }
 
-/* 分享卡 canvas */
-.share-area { text-align: center; }
-#share-canvas {
-  max-width: 100%;
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow-sm);
-  margin: 0 auto 16px;
-  display: block;
+/* 页脚 Made By Reruna */
+.site-footer {
+  text-align: center;
+  padding: 28px 20px 36px;
+  font-size: 13px;
+  letter-spacing: .04em;
 }
+.site-footer a {
+  color: var(--ink-faint);
+  text-decoration: none;
+}
+.site-footer a:hover { color: var(--gold); }
 
 /* ========== 图鉴页 ========== */
 .codex-section { margin-bottom: 36px; }
